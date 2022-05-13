@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .minus:after {
+        content: "-";
+      }
+      .plus:after {
+        content: "+";
+      }
+    </style>
+    <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="changer" class="minus">Main menu</div>
+    <ul id="nav">
+      <li>Lorem.</li>
+      <li>Illum!</li>
+      <li>Enim.</li>
+      <li>Unde.</li>
+    </ul>
+    <script>
+      $("#changer").click(function () {
+        $("li").slideToggle(1000);
+        $("#changer").toggleClass("plus");
+        $("#changer").toggleClass("minus");
+      });
+    </script>
+  </body>
+</html>
